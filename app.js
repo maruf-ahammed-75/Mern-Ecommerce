@@ -1,3 +1,5 @@
+require('dotenv').config(); // 🔹 Load .env file
+
 const express = require('express');
 const router = require('./src/routes/api');
 const app = new express();
@@ -40,7 +42,7 @@ app.use('/api/v1', router);
 
 
 
-let URI = "mongodb://localhost:27017/MernEcommerce";
+let URI = process.env.DB_URL;
 let option = {user: "", pass: "" ,autoIndex: true};
 
 mongoose.connect(URI, option).then(()=>{

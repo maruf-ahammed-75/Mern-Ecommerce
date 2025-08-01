@@ -1,6 +1,8 @@
-const app = require("./app");
-const PORT = 5020;
+require('dotenv').config(); // 🔹 Load .env file
 
-app.listen(5020, () => {
-    console.log("run port 5020");
+const app = require("./app");
+const PORT = process.env.PORT; // fallback if .env is missing
+
+app.listen(PORT, () => {
+    console.log("✅ Server running on port:", PORT);
 });
