@@ -12,5 +12,5 @@ const Schema = mongoose.Schema({
 },
 {timestamps: true,versionKey: false}
 )
-const PamentSettingModel = mongoose.model("pamentsettings",Schema);
+const PamentSettingModel = mongoose.model("paymentsettings",Schema);
 module.exports = PamentSettingModel;
